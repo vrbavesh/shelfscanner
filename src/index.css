@@ -16,6 +16,8 @@
   /* Slate-200 */
   --success-color: #10b981;
   /* Emerald-500 */
+  --warning-color: #f59e0b;
+  /* Amber-500 */
   --error-color: #ef4444;
   /* Red-500 */
   --focus-ring: rgba(15, 23, 42, 0.2);
@@ -149,6 +151,71 @@ button {
   outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+/* SaaS Layout Utilities */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar-panel {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.info-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.badge-blue {
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+.badge-green {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.badge-gray {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.checklist li::before {
+  content: "✓";
+  color: var(--success-color);
+  font-weight: bold;
 }
 
 /* Landing Page Grid Layouts */
