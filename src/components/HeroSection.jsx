@@ -37,12 +37,7 @@ function HeroSection({ onStart }) {
                     >
                         Scan Your Shelf
                     </button>
-                    <button
-                        className="btn-secondary"
-                        style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}
-                    >
-                        View Demo
-                    </button>
+                    
                 </div>
 
                 <div style={{ marginTop: '4rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
@@ -117,11 +112,7 @@ function HeroSection({ onStart }) {
                     <h4 style={{ margin: 0 }}>Bookshelf Match</h4>
                     <p style={{ fontSize: '0.9rem', margin: '0.5rem 0 0' }}>© 2025 Bavesh VR.</p>
                 </div>
-                <div style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                    <span>Privacy Policy</span>
-                    <span>Terms of Service</span>
-                    <span>Contact Support</span>
-                </div>
+                
             </footer>
         </div>
     );

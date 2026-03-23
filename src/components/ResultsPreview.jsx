@@ -15,7 +15,7 @@ function ResultsPreview({ results, onReset }) {
                     <p style={{ margin: 0 }}>Generated on {new Date().toLocaleDateString()}</p>
                 </div>
                 <div style={{ display: 'flex', gap: '1rem' }}>
-                    <button className="btn-secondary" onClick={() => alert("Export feature coming soon!")}>Export CSV</button>
+                    
                     <button className="btn-secondary" onClick={onReset}>Start New Scan</button>
                 </div>
             </header>
