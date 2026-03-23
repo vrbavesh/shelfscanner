@@ -110,7 +110,7 @@ function HeroSection({ onStart }) {
             <footer style={{ padding: '4rem 0', borderTop: '1px solid var(--border-color)', marginTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
                 <div>
                     <h4 style={{ margin: 0 }}>Bookshelf Match</h4>
-                    <p style={{ fontSize: '0.9rem', margin: '0.5rem 0 0' }}>© 2025 Bavesh VR.</p>
+                    <p style={{ fontSize: '0.9rem', margin: '0.5rem 0 0' }}>© 2026 BNS.</p>
                 </div>
                 
             </footer>
