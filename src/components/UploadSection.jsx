@@ -33,7 +33,6 @@ function UploadSection({ onImageSelected }) {
     };
 
     const processFile = (file) => {
-        // Basic validation
         if (!file.type.startsWith('image/')) {
             alert("Please upload an image file (JPEG, PNG).");
             return;
@@ -42,7 +41,6 @@ function UploadSection({ onImageSelected }) {
         const reader = new FileReader();
         reader.onloadend = () => {
             setPreview(reader.result);
-            // Pass file back to parent waiting 1s for "processing" effect
             setTimeout(() => onImageSelected(file, reader.result), 800);
         };
         reader.readAsDataURL(file);
@@ -60,7 +58,6 @@ function UploadSection({ onImageSelected }) {
             </div>
 
             <div className="split-layout">
-                {/* Main Upload Area */}
                 <div>
                     <div
                         className={`card ${dragActive ? 'drag-active' : ''}`}
@@ -113,7 +110,6 @@ function UploadSection({ onImageSelected }) {
                     </div>
                 </div>
 
-                {/* Sidebar Context */}
                 <div>
                     <div className="sidebar-panel">
                         <h4 style={{ fontSize: '1rem', marginBottom: '1rem' }}>Pre-Flight Checklist</h4>

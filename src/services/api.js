@@ -1,12 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-/**
- * Service to interact with Google Gemini API for bookshelf analysis.
- */
-
-// Initialize the API client
-// Note: In a production environment, you should proxy requests through a backend
-// to keep your API key secure. For this MVP, we use the client-side key.
 const getClient = () => {
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
     if (!apiKey) {
@@ -20,13 +13,13 @@ export const analyzeShelf = async (imageFile, preferences) => {
 
     try {
         const client = getClient();
-        // Use the new simplified 1.5 flash model if available, or fall back to standard
+        
         const model = client.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-        // 1. Convert Image to Base64
+       
         const base64Image = await fileToGenerativePart(imageFile);
 
-        // 2. Construct the Prompt
+   
         const prompt = `
         Role: You are an expert librarian and bibliophile AI.
         
@@ -57,14 +50,14 @@ export const analyzeShelf = async (imageFile, preferences) => {
         Limit: Return top 3-5 recommendations.
         `;
 
-        // 3. Call API
+       
         const result = await model.generateContent([prompt, base64Image]);
         const response = await result.response;
         const text = response.text();
 
         console.log("Gemini Raw Response:", text);
 
-        // 4. Parse JSON
+       
         return parseResponse(text);
 
     } catch (error) {
@@ -73,7 +66,7 @@ export const analyzeShelf = async (imageFile, preferences) => {
     }
 };
 
-// Helper: Convert File to proper format for Gemini SDK
+
 async function fileToGenerativePart(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -91,10 +84,9 @@ async function fileToGenerativePart(file) {
     });
 }
 
-// Helper: Robus JSON parsing
 function parseResponse(responseText) {
     try {
-        // Strip markdown code blocks if present
+
         let cleanText = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
 
         const data = JSON.parse(cleanText);

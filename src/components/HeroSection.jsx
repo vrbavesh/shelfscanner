@@ -4,7 +4,6 @@ function HeroSection({ onStart }) {
     return (
         <div className="fade-in">
 
-            {/* 1. Hero Area */}
             <section style={{ textAlign: 'center', padding: '6rem 0 4rem' }}>
                 <span style={{
                     textTransform: 'uppercase',
@@ -45,7 +44,6 @@ function HeroSection({ onStart }) {
                 </div>
             </section>
 
-            {/* 2. Feature Grid */}
             <section className="section-container">
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <h2>Why Use Bookshelf Match?</h2>
@@ -80,7 +78,6 @@ function HeroSection({ onStart }) {
                 </div>
             </section>
 
-            {/* 3. How It Works */}
             <section className="section-container" style={{ background: 'var(--bg-color)' }}>
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <h2>How It Works</h2>
@@ -106,7 +103,6 @@ function HeroSection({ onStart }) {
                 </div>
             </section>
 
-            {/* 4. Footer */}
             <footer style={{ padding: '4rem 0', borderTop: '1px solid var(--border-color)', marginTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
                 <div>
                     <h4 style={{ margin: 0 }}>Bookshelf Match</h4>

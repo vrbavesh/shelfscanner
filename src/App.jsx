@@ -36,14 +36,14 @@ function App() {
     setError(null);
 
     try {
-      // Call Mock Service
+      
       const matches = await analyzeShelf(shelfImage, prefs);
       setResults(matches);
       setStep(STEPS.RESULTS);
     } catch (err) {
       console.error(err);
       setError(err.message || "Something went wrong.");
-      setStep(STEPS.PREFERENCES); // Go back to prefs on error so they can retry
+      setStep(STEPS.PREFERENCES); 
     }
   };
 
@@ -58,7 +58,6 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Dynamic Header */}
       <header className="main-header" style={{ marginBottom: '2rem', textAlign: 'center', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
         <h1 style={{ fontSize: '1.5rem', margin: 0, color: 'var(--text-primary)' }}>
           Bookshelf Match
@@ -76,7 +75,6 @@ function App() {
 
         {step === STEPS.PREFERENCES && (
           <>
-            {/* Show tiny preview of the image they uploaded */}
             {imagePreview && (
               <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
                 <img src={imagePreview} alt="Selected" style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '8px', opacity: 0.8 }} />

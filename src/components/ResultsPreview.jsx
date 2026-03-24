@@ -3,7 +3,6 @@ import React from 'react';
 function ResultsPreview({ results, onReset }) {
     if (!results) return null;
 
-    // Calculate fake metrics for the "Report"
     const averageMatch = Math.round(results.reduce((acc, curr) => acc + curr.matchScore, 0) / results.length);
     const topGenre = results[0].genre;
 
@@ -20,7 +19,6 @@ function ResultsPreview({ results, onReset }) {
                 </div>
             </header>
 
-            {/* Metrics Row */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
                 <div className="card" style={{ padding: '1.5rem', textAlign: 'center' }}>
                     <div style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--accent-color)', lineHeight: 1 }}>{results.length}</div>
@@ -51,7 +49,6 @@ function ResultsPreview({ results, onReset }) {
                             alignItems: 'stretch'
                         }}
                     >
-                        {/* Rank / Score Indicator Sidebar */}
                         <div style={{
                             background: i === 0 ? 'var(--accent-color)' : 'var(--bg-color)',
                             width: '6px',
@@ -73,7 +70,6 @@ function ResultsPreview({ results, onReset }) {
                             </div>
                         </div>
 
-                        {/* Score Box */}
                         <div style={{
                             padding: '1.5rem',
                             borderLeft: '1px solid var(--border-color)',
@@ -95,7 +91,6 @@ function ResultsPreview({ results, onReset }) {
                 ))}
             </div>
 
-            {/* Disclaimer */}
             <div style={{ textAlign: 'center', marginTop: '4rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                 <p>AI analysis may vary. Always double-check book details before reading.</p>
             </div>

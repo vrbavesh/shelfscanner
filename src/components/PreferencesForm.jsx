@@ -45,10 +45,8 @@ function PreferencesForm({ onSubmit }) {
             </div>
 
             <div className="split-layout">
-                {/* Main Form */}
                 <div className="card">
 
-                    {/* Persona Selector */}
                     <div style={{ marginBottom: '2rem' }}>
                         <label style={{ display: 'block', marginBottom: '0.75rem', fontWeight: '600' }}>
                             Reader Persona <span className="info-badge badge-blue">New</span>
@@ -77,7 +75,6 @@ function PreferencesForm({ onSubmit }) {
                         </p>
                     </div>
 
-                    {/* Genre Chips */}
                     <div style={{ marginBottom: '2rem' }}>
                         <label style={{ display: 'block', marginBottom: '0.75rem', fontWeight: '600' }}>
                             Content Filters (Genres)
@@ -104,7 +101,6 @@ function PreferencesForm({ onSubmit }) {
                         </div>
                     </div>
 
-                    {/* Mood Select */}
                     <div style={{ marginBottom: '2rem' }}>
                         <label style={{ display: 'block', marginBottom: '0.75rem', fontWeight: '600' }}>
                             Current Vibe / Mood
@@ -121,7 +117,6 @@ function PreferencesForm({ onSubmit }) {
                         </select>
                     </div>
 
-                    {/* Optional Author */}
                     <div style={{ marginBottom: '2rem' }}>
                         <label style={{ display: 'block', marginBottom: '0.75rem', fontWeight: '600' }}>
                             Favorite Authors (Optional)
@@ -144,7 +139,6 @@ function PreferencesForm({ onSubmit }) {
                     </button>
                 </div>
 
-                {/* Live Context Sidebar */}
                 <div>
                     <div className="sidebar-panel" style={{ position: 'sticky', top: '2rem' }}>
                         <h4 style={{ fontSize: '1rem', marginBottom: '1rem' }}>Search Config</h4>
