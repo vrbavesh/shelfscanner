@@ -60,7 +60,7 @@ function App() {
     <div className="app-container">
       <header className="main-header" style={{ marginBottom: '2rem', textAlign: 'center', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
         <h1 style={{ fontSize: '1.5rem', margin: 0, color: 'var(--text-primary)' }}>
-          Bookshelf Match
+          Novel Finder
         </h1>
       </header>
 
